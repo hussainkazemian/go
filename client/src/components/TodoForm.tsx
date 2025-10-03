@@ -15,12 +15,19 @@ const TodoForm = () => {
 		mutationFn: async (e: React.FormEvent) => {
 			e.preventDefault();
 			try {
+				const trimmed = newTodo.trim();
+				if (!trimmed) {
+					throw new Error("Todo body cannot be empty");
+				}
+				if (trimmed.length > 200) {
+					throw new Error("Todo body must be 200 characters or less");
+				}
 				const res = await fetch(BASE_URL + `/todos`, {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
 					},
-					body: JSON.stringify({ body: newTodo }),
+					body: JSON.stringify({ body: trimmed }),
 				});
 				const data = await res.json();
 
@@ -50,10 +57,13 @@ const TodoForm = () => {
 					value={newTodo}
 					onChange={(e) => setNewTodo(e.target.value)}
 					ref={(input) => input && input.focus()}
+					placeholder="Add a task (max 200 chars)"
+					maxLength={200}
 				/>
 				<Button
 					mx={2}
 					type='submit'
+					isDisabled={isCreating}
 					_active={{
 						transform: "scale(.97)",
 					}}

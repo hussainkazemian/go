@@ -26,7 +26,7 @@ export default function Navbar() {
 					{/* RIGHT SIDE */}
 					<Flex alignItems={"center"} gap={3}>
 						<Text fontSize={"lg"} fontWeight={500}>
-							Daily Tasks
+							DAILY NOTES
 						</Text>
 						{/* Toggle Color Mode */}
 						<Button onClick={toggleColorMode}>
