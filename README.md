@@ -89,19 +89,7 @@ App URLs
 - React: http://localhost:5173
 - API:   http://localhost:5000/api
 
-## Production Build
 
-Build the React app, then serve it with Go (Fiber will serve `client/dist`).
-
-```powershell
-cd D:\Semester-5\GO\client
-npm run build
-
-cd D:\Semester-5\GO
-$env:ENV="production"; go run .
-```
-
-Now open http://localhost:5000
 
 ## Troubleshooting
 
