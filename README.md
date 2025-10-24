@@ -4,7 +4,6 @@
 
 Build a clean, responsive full‑stack Todo app with Go (Fiber) and React. It supports CRUD, filtering, sorting, validation, theming, and a production build served by Go.
 
-• Video tutorial: https://youtu.be/zw8z_o_kDqc
 
 ## Highlights
 
@@ -98,6 +97,9 @@ App URLs
 - CORS errors in dev: ensure the API runs on 5000 and the client on 5173; CORS is enabled for `http://localhost:5173`.
 - Mongo connection: verify `MONGODB_URI` in `.env` and internet/firewall access to Atlas.
 
-## License
+## App Screenshot
+### The app link will be expiered on 25.10.2025  
 
-MIT
+![Screenshot from the app](/client/public/app.png)
+
+https://courageous-simplicity-production-44c7.up.railway.app/
